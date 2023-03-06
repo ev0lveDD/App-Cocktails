@@ -4,6 +4,7 @@ import Navigation from "./Navigation";
 import SearchBar from './SearchBar';
 import CategoryLoading from "./CategoryLoading";
 import DrinkList from './DrinkList';
+import CategoryCard from './Components/CategoryCard';
 
 function Glasses() {
     const [data, setData] = useState(null);
@@ -97,16 +98,13 @@ function Glasses() {
     }, []);
     
     return(
-    <div class="text-center flex items-center justify-center flex-col m-auto">
-        <h1 class="text-xl justify-center items-center my-8 text-gray-800 font-medium">Glasses</h1>
+    <div className="text-center flex items-center justify-center flex-col m-auto">
+        <h1 className="text-xl justify-center items-center my-8 text-gray-800 font-medium">Glasses</h1>
         <SearchBar />
         <Navigation />
-        {loading ? <CategoryLoading /> : <div class="flex gap-4 flex-wrap items-center justify-center pb-8 md:w-2/4">{data.map((item) =>{
+        {loading ? <CategoryLoading /> : <div className="flex gap-4 flex-wrap items-center justify-center pb-8 md:w-2/4">{data.map((item, i) =>{
           return(
-            <Link to={`/Cocktails-App/Glasses/${item.strGlass}`}>
-              <div class="h-56 w-36 bg-cover bg-center flex rounded-lg	flex-col flex-wrap justify-end	flex items-stretch animate-fadeInRight"  style={{backgroundImage: (imageCheck(item.strGlass))}}>
-                <h1 class="text-left text-base text-slate-100 drop-shadow-sm font-medium w-4/5 mx-4 my-4">{item.strGlass}</h1>
-              </div></Link>);
+            <CategoryCard category={"Glasses"} itemData={item.strGlass} iKey={i} imageCheck={imageCheck}/>);
         })}</div>}
     </div>
     );

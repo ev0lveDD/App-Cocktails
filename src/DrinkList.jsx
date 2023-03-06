@@ -27,14 +27,14 @@ function DrinkList(props){
     }, []);
     
     return(
-    <div class="text-center flex items-center justify-center flex-col m-auto">
-        <h1 class="text-xl justify-center items-center my-8 text-gray-800 font-medium">{id}</h1>
+    <div className="text-center flex items-center justify-center flex-col m-auto">
+        <h1 className="text-xl justify-center items-center my-8 text-gray-800 font-medium">{id}</h1>
         <Navigation />
-        {loading ? <DrinkListLoading /> : <div className="w-full">{data.map((item) =>{
+        {loading ? <DrinkListLoading /> : <div className="w-full">{data.map((item, i) =>{
           return(
             <Link to={`/Cocktails-App/Drink/${item.strDrink}`}>
               <div className="w-full">
-                <div className="flex w-full m-auto gap-6 text-xl mb-4 border border-slate-100 rounded-lg py-4 px-8 hover:shadow hover:outline-none"> 
+                <div key={i} className="flex w-full m-auto gap-6 text-xl mb-4 border border-slate-100 rounded-lg py-4 px-8 hover:shadow hover:outline-none"> 
                   <img className="w-24 h-24 rounded-lg" src={(item.strDrinkThumb)}></img>
                   <div className="text-left">
                     <p className="text-gray-800 mb-0 mt-4 text-sm font-bold animate-fadeInBottom">{item.strDrink}</p>

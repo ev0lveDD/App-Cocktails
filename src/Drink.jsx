@@ -35,7 +35,7 @@ function Drink(){
         <img className="h-1/2 w-screen mb-6 rounded-bl-[4rem] md:w-2/3" src={data.strDrinkThumb}></img>
         <p className="mt-1.5 text-gray-400 text-sm font-medium mb-0 mx-8 delay-200 animate-fadeInBottom">{data.strCategory}</p>
         <h1 className="text-gray-800 mx-8 text-3xl font-extrabold mt-0 delay-300 animate-fadeInBottom">{data.strDrink}</h1>
-        <h5 className="text-gray-800 mx-8 tracking-wide font-extrabold mb-0 delay-400 animate-fadeInBottom">INGREDIENTS</h5>
+        <h5 className="text-gray-800 mx-8 tracking-wide font-extrabold mb-0 mt-6 delay-400 animate-fadeInBottom">INGREDIENTS</h5>
         <div className="text-gray-800 mx-8 mt-6 ">
             <p className="text-gray-400 text-sm font-semibold delay-500	animate-fadeInBottom">{data.strMeasure1}</p>
             <p className="mt-1.5 mb-6 text-xl font-semibold animate-fadeInBottom">{data.strIngredient1}</p>
