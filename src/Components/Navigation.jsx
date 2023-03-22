@@ -1,6 +1,6 @@
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
-import NavigationButton from "./Components/NavigationButton";
+import NavigationButton from "./NavigationButton";
 
 function Navigation() {
     const location = useLocation();

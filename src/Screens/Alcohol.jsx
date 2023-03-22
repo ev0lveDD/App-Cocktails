@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
-import Navigation from "./Navigation";
-import SearchBar from './SearchBar';
-import CategoryLoading from "./CategoryLoading";
+import Navigation from "../Components/Navigation";
+import SearchBar from '../Components/SearchBar';
+import CategoryLoading from "../Components/CategoryLoading";
 import DrinkList from './DrinkList';
-import CategoryCard from './Components/CategoryCard';
+import CategoryCard from '../Components/CategoryCard';
 
 function Alcohol() {
     const [data, setData] = useState(null);
@@ -13,13 +13,13 @@ function Alcohol() {
     function imageCheck(drink) {
       switch (drink) {
         case 'Alcoholic':
-          return(`url(${require('./Alcoholic-Images/alcoholic.jpg')})`);
+          return(`url(${require('../Alcoholic-Images/alcoholic.jpg')})`);
         case 'Non alcoholic':
-          return(`url(${require('./Alcoholic-Images/non-alcoholic.jpg')})`);
+          return(`url(${require('../Alcoholic-Images/non-alcoholic.jpg')})`);
         case 'Optional alcohol':
-          return(`url(${require('./Alcoholic-Images/optional-alcohol.jpg')})`);
+          return(`url(${require('../Alcoholic-Images/optional-alcohol.jpg')})`);
         default:
-          return(`url(${require('./Alcoholic-Images/alcoholic.jpg')})`);
+          return(`url(${require('../Alcoholic-Images/alcoholic.jpg')})`);
       }
     }
 

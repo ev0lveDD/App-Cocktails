@@ -1,5 +1,5 @@
 import React from "react";
-import DrinkListLoadingItem from "./DrinkListLoadingItem";
+import DrinkListLoadingItem from "../Components/DrinkListLoadingItem";
 
 function DrinkListLoading() {
     return(

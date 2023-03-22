@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
-import Navigation from "./Navigation";
-import SearchBar from './SearchBar';
-import CategoryLoading from "./CategoryLoading";
+import Navigation from "../Components/Navigation";
+import SearchBar from '../Components/SearchBar';
+import CategoryLoading from "../Components/CategoryLoading";
 import DrinkList from './DrinkList';
-import CategoryCard from './Components/CategoryCard';
+import CategoryCard from '../Components/CategoryCard';
 
 function Category() {
     const [data, setData] = useState(null);
@@ -13,29 +13,29 @@ function Category() {
     function imageCheck(drink) {
       switch (drink) {
         case 'Ordinary Drink':
-          return(`url(${require('./Category-Images/old-fashioned.jpg')})`);
+          return(`url(${require('../Category-Images/old-fashioned.jpg')})`);
         case 'Other/Unknown':
-          return(`url(${require('./Category-Images/other.jpg')})`);
+          return(`url(${require('../Category-Images/other.jpg')})`);
         case 'Shake':
-          return(`url(${require('./Category-Images/shake3.jpg')})`);
+          return(`url(${require('../Category-Images/shake3.jpg')})`);
         case 'Cocktail':
-          return(`url(${require('./Category-Images/cocktail.jpg')})`);
+          return(`url(${require('../Category-Images/cocktail.jpg')})`);
         case 'Cocoa':
-          return(`url(${require('./Category-Images/cocoa.jpg')})`);
+          return(`url(${require('../Category-Images/cocoa.jpg')})`);
         case 'Shot':
-          return(`url(${require('./Category-Images/shot.jpg')})`);
+          return(`url(${require('../Category-Images/shot.jpg')})`);
         case 'Coffee / Tea':
-          return(`url(${require('./Category-Images/coffee.PNG')})`); 
+          return(`url(${require('../Category-Images/coffee.PNG')})`); 
         case 'Homemade Liqueur':
-          return(`url(${require('./Category-Images/homemade.JPG')})`);
+          return(`url(${require('../Category-Images/homemade.JPG')})`);
         case 'Punch / Party Drink':
-          return(`url(${require('./Category-Images/punch.JPG')})`);
+          return(`url(${require('../Category-Images/punch.JPG')})`);
         case 'Beer':
-          return(`url(${require('./Category-Images/beer2.jpg')})`);
+          return(`url(${require('../Category-Images/beer2.jpg')})`);
         case 'Soft Drink':
-          return(`url(${require('./Category-Images/soft-drink.jpg')})`);
+          return(`url(${require('../Category-Images/soft-drink.jpg')})`);
         default:
-          return(`url(${require('./Category-Images/old-fashioned.jpg')})`);
+          return(`url(${require('../Category-Images/old-fashioned.jpg')})`);
       }
     }
 

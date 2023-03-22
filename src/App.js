@@ -1,11 +1,11 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
-import Category from './Category';
-import Glasses from "./Glasses";
-import Ingredients from "./Ingredients";
-import Alcohol from "./Alcohol";
-import DrinkList from './DrinkList';
-import Drink from './Drink';
+import Category from './Screens/Category';
+import Glasses from "./Screens/Glasses";
+import Ingredients from "./Screens/Ingredients";
+import Alcohol from "./Screens/Alcohol";
+import DrinkList from './Screens/DrinkList';
+import Drink from './Screens/Drink';
 import {Link, Route, Routes} from "react-router-dom";
 
 function App() {

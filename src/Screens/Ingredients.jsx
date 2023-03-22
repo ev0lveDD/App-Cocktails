@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
-import Navigation from "./Navigation";
-import SearchBar from './SearchBar';
-import CategoryLoading from "./CategoryLoading";
+import Navigation from "../Components/Navigation";
+import SearchBar from '../Components/SearchBar';
+import CategoryLoading from "../Components/CategoryLoading";
 import DrinkList from './DrinkList';
-import CategoryCard from './Components/CategoryCard';
+import CategoryCard from '../Components/CategoryCard';
 
 function Ingredients() {
     const [data, setData] = useState(null);
@@ -12,9 +12,9 @@ function Ingredients() {
 
     function imageCheck(drink) {
       if(drink==="Shake"){
-        return(`url(${require('./Glasses-Images/highball.JPG')})`);
+        return(`url(${require('../Glasses-Images/highball.JPG')})`);
       } else {
-        return(`url(${require('./Glasses-Images/highball.JPG')})`);
+        return(`url(${require('../Glasses-Images/highball.JPG')})`);
       }
     }
 
